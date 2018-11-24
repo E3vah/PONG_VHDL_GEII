@@ -40,6 +40,26 @@ entity vue_jeu is
 end vue_jeu;
 
 architecture Behavioral of vue_jeu is
+-- déclaration des raquettes 
+	--Largeur
+	--constant raquette_gauche_x : integer :=20;
+	--constant raquette_droite_x : integer :=610;
+	-- constant demi_raquette_x : integer := 5;
+	-- constant raquette_droite_largeur_avant: integer := raquette_droite_x+demi_raquette_x;
+	-- constant raquette_droite_largeur_arriere: integer := raquette_droite_x-demi_raquette_x;
+	-- constant raquette_gauche_largueur_avant : integer :=raquette_gauche_x+demi_raquette_x
+	-- constant raquette_gauche_largueur_arriere : integer :=raquette_gauche_x-demi_raquette_x;
+
+	--Hauteur
+	--signal raquette_gauche_y : integer range 0 to 480 := 240;
+	--signal raquette_droite_y : integer range 0 to 480 : = 240;
+	--constant demi_raquette_y : integer :=30;
+	-- constant limite_basse : integer :=475;
+	-- constant limite_haute : integer :=5;
+
+--déclaration de la balle constante
+	--signal balle_x : integer range 0 to 640 := 320;
+	--signal balle_y : integer range 0 to 480 := 240;
 
 begin
 	process(X, Y)
@@ -52,6 +72,11 @@ begin
 			R<="100";
 			G<="100";
 			B<="00";
+-- énumération des cas dans lesquels des pixels seront allumés en jaune
+	--allumage des pixels des raquettes
+		--allumage de l'axe x constant délimité par l'allumage de l'axe y gauche/droit mouvant
+	--allumage des pixels de la balle selon une trajectoire
+	
 		end if;		
 	end process;
 end Behavioral;
